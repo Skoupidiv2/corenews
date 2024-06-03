@@ -86,6 +86,26 @@
         .hide {
             transform: translateY(-100%);
         }
+             @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #2c2c2c;
+                color: white;
+            }
+            #welcomeDiv {
+                background-color: #2c2c2c;
+                color: white;
+            }
+            #headingdiv {
+                background-color: black;
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: #f0f0f0;
+                color: black;
+            }
+        }
         #homebtn,#aboutbtn, #signupbtn, #loginbtn{
             margin: 0px;
             height: 70px;
@@ -132,7 +152,7 @@
         });
         let homebtn = document.getElementById("homebtn")
         homebtn.onclick = function(){
-            window.location.href="https://skoupidiv2.github.io/corenews/"
+            window.location.href="https://www.google.com/"
         }
         let signupbtn = document.getElementById("signupbtn")
         signupbtn.onclick = function(){
