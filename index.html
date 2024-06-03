@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoreNews.com</title>
+    <style>
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #2c2c2c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgb(22,22,22);
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-button {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }
+        body::-webkit-scrollbar:horizontal {
+            display: none;
+        }
+        body {
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            background-color: #2c2c2c;
+            color: white;
+            font-family: sans-serif;
+        }
+        #welcomeDiv {
+            display: block;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2c2c2c;
+            color: white;
+            font-family: sans-serif;
+        }
+        #mainframe {
+            margin-bottom: -360px;
+            display: flex;
+            align-items: flex-start;
+        }
+        #welcomettxt {
+            transition: 0.3s;
+            user-select: none;
+        }
+        #welcomettxt:hover {
+            text-shadow: 0px 0px 3px white;
+        }
+        #newsdiv {
+            display: flex;
+            margin-top: 100px;
+            align-items: flex-start;
+        }
+        #img1 {
+            height: 100px;
+        }
+        #news1 {
+            margin: 20px;
+        }
+        #headingdiv {
+            background-color: rgb(31, 31, 31);
+            height: 70px;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: fixed;
+            left: 0;
+            top: 0;
+            transition: transform 0.05s ease-in-out;
+            display: flex;
+            align-items: flex-start;
+        }
+        .hide {
+            transform: translateY(-100%);
+        }
+        #homebtn,#aboutbtn, #signupbtn, #loginbtn{
+            margin: 0px;
+            height: 70px;
+            width: 100px;
+            font-weight: normal;
+            font-size:large;
+            background-color: transparent;
+            border: 0px solid black;
+            color: white;
+            transition: 0.2s;
+        }
+        #homebtn:hover, #aboutbtn:hover, #signupbtn:hover, #loginbtn:hover{
+            background-color: rgb(27, 27, 27);
+        }
+    </style>
+</head>
+<body>
+    <div id="headingdiv">
+        <button id="homebtn">Home</button>
+        <button id="aboutbtn">About</button>
+        <button id="signupbtn">Sign Up</button>
+        <button id="loginbtn">Log in</button>
+    </div>
+    <div id="welcomeDiv">
+        <h1 id="welcomettxt">Welcome to Core News, News you can trust!</h1>
+    </div>
+    <h1>Recent News</h1>
+    <div id="mainframe">
+        <div id="newsdiv">
+            <div id="news1">
+                <img id="img1" src="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp" alt="">
+                <p>breaking news <br> this cat is illegal</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const bar = document.getElementById('headingdiv');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 100) {
+                bar.classList.add('hide');
+            } else {
+                bar.classList.remove('hide');
+            }
+        });
+        let homebtn = document.getElementById("homebtn")
+        homebtn.onclick = function(){
+            window.location.href="https://www.google.com/"
+        }
+        let signupbtn = document.getElementById("signupbtn")
+        signupbtn.onclick = function(){
+            window.location.href="https://skoupidiv2.github.io/pagesignup/"
+        }
+        let loginbtn = document.getElementById("loginbtn")
+        loginbtn.onclick = function(){
+            window.location.href="https://skoupidiv2.github.io/pagetesting/"
+        }
+    </script>
+</body>
+</html>
